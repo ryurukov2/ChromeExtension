@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Text Summarizer",
+    "version": "1.0",
+    "key": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBb0lNSDRHdjBTekYxYU4zSmdad2QNCnROdyt5b0QrZnhocWJUVGpYWC8zYmhKUys1SkJWci9GYlo0bExjQWxIRkJyOWhMcnN1cjl6VHAvTWJQcG5lMzYNCm94K2szU1REWFhyWmw5ZXN2TG1uNzRVbEozdVliTVgzLzNQQnlBd0ZKVHF2NkNoTXB2YVpUWUhDMGFrNVVhbTANCmRPTWdmcWxsVmNrWmpqZVBWeERNT0ppL2NvZkxFK1dLelBiZjJKMnQxSFdlaGdYc0JGRzdMbHRvellHQTNPSXgNCnVDdDVIaWNjOTBiSTR0cllnekYrTU9tNnZHeWYrTmNIZFEyRTdiSDlIVkRLVm9pVWhFNzZHMHF0MXovanZuZWcNCllEeEhXa3N3UW5wQS94bm5WNGxIeGhadkRKd0NDMkxDR2pURVJueHV3L0hIVEdzdmxER0RNaUhKRkNxK0lrRkYNClBRSURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0NCg==",
+    "description": "A Chrome extension to summarize text using OpenAI's API",
+    // "icons": {
+    //   "48": "icon48.png",
+    //   "128": "icon128.png"
+    // },
+    "action": {
+      "default_popup": "popup.html"
+    //   "default_icon": {
+    //     "48": "icon48.png"
+    //   }
+    },
+    "permissions": [
+      "activeTab",
+      "identity",
+      "identity.email"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    }
+  }
+  
