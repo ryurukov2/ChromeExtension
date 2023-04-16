@@ -16,8 +16,8 @@ async function getSummary(text) {
         const port = chrome.runtime.connect({ name: "summary" });
         port.postMessage({ action: "summarize", text });
         port.onMessage.addListener((response) => {
-            if (response.statusCode === 200){
-                remainingAttempts += 1; 
+            if (response.statusCode === 200) {
+                remainingAttempts += 1;
             }
             // console.log("response status: " + response.statusCode);
             // console.log("Summary: " + response.summary);;
@@ -39,3 +39,13 @@ async function updateRemainingAttempts() {
         });
     });
 }
+
+document.getElementById("apiVersion").addEventListener("change", async (event) => {
+    const selectedVersion = event.target.value;
+    chrome.storage.local.set({ "selectedVersion": selectedVersion });
+});
+
+// Set the initial value of the select element based on the stored value
+chrome.storage.local.get(["selectedVersion"], (result) => {
+    document.getElementById("apiVersion").value = result.selectedVersion || "GPT3";
+});

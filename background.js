@@ -6,7 +6,12 @@ chrome.runtime.onConnect.addListener(async (port) => {
                 const accountId = await getAccountId();
                 console.log(typeof (accountId));
                 console.log(accountId);
-                const response = await fetchSummaryLocal(message.text, accountId);
+                const selectedVersion = await new Promise((resolve) => {
+                    chrome.storage.local.get(["selectedVersion"], (result) => {
+                      resolve(result.selectedVersion || "GPT3");
+                    });
+                  });
+                const response = await fetchSummaryLocal(message.text, accountId, selectedVersion);
                 console.log(response.status);
                 port.postMessage({ summary: response.response_data, statusCode: response.status });
             } catch (error) {
@@ -27,9 +32,11 @@ async function getAccountId() {
     }
 }
 
-async function fetchSummaryLocal(text, accountId) {
-    // const response = await fetch('https://budgethelper.click/api/submit-text/', {
-        const response = await fetch('http://localhost:81/api/submit-text/', {
+async function fetchSummaryLocal(text, accountId, selectedVersion) {
+
+    const endpoint = selectedVersion === "GPT3.5" ? "/submit-text-adv/" : "/submit-text/";
+    // const response = await fetch(`https://budgethelper.click/api${endpoint}`, {
+    const response = await fetch(`http://localhost:81/api${endpoint}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +55,7 @@ async function fetchSummaryLocal(text, accountId) {
 
 async function checkDailyUsage(accountId) {
     // const response = await fetch('https://budgethelper.click/api/check-daily-usage/', {
-        const response = await fetch('http://localhost:81/api/check-daily-usage/', {
+    const response = await fetch('http://localhost:81/api/check-daily-usage/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
