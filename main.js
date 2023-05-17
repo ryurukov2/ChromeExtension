@@ -3,7 +3,7 @@ const summarizeButton = document.getElementById("summarizeButton");
 
 inputText.addEventListener("input", function() {
     const inputLength = inputText.value.length;
-    if (inputLength >= 10) {
+    if (inputLength >= 200) {
       summarizeButton.removeAttribute("disabled");
     } else {
       summarizeButton.setAttribute("disabled", "");

@@ -9,8 +9,36 @@
     <title>Text Summarizer</title>
   </head>
   <body>
+    <!-- <div id="loginOverlay" class="overlay">
+      <div class="login-form">
+        <h2>Log in</h2>
+        <button id="sign-in" class="google-login-button">
+          <div class="login-btn">
+          <img src="google-logo.png" alt="Google Logo" width="18" height="18">
+        </div>
+        <div class="button-text">Sign In with Google</div></button>
+        
+      </div>
+    </div> -->
+    
+    <div id="loginOverlay" class="overlay">
+      <div class="login-form">
+        <h2>Log in</h2>
+        <button id="sign-in" class="google-login-button">
+          <div class="login-btn">
+            <img src="google-logo.png" alt="Google Logo" width="18" height="18" style="margin-right:5px;">
+          </div>
+          <div class="button-text">Sign In with Google</div>
+        </button>
+      </div>
+    </div>
+    
+
+    <button id="sign-out" class="sign-out-button" style="display:none;">Sign Out</button>
+
+    
     <h1>Text Summarizer</h1>
-    <p id="remainingAttempts">Today's attempts: ...</p>
+    <p id="remainingAttempts"></p>
     <p>Select GPT version:</p>
     <select id="apiVersion">
       <option value="GPT3">

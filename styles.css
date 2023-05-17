@@ -1,12 +1,12 @@
 /* set background color for body and apply font */
 body {
-  width: 600px;
+  width: 690px;
   background-color: #f8f9fa;
   font-family: 'Poppins', sans-serif;
 }
 
 /* style for the header */
-h1{
+h1 {
   text-align: center;
   margin-top: 30px;
   font-size: 36px;
@@ -25,7 +25,7 @@ h1{
 
 /* style for the input text box */
 textarea {
-  width: 100%;
+  width: 95%;
   height: 200px;
   margin-top: 30px;
   padding: 20px;
@@ -68,16 +68,16 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  }
-  
-  #summarizeButton:disabled {
+}
+
+#summarizeButton:disabled {
   background-color: #bdc3c7;
   color: #7f8c8d;
   cursor: not-allowed;
   box-shadow: none;
-  }
-  
-  #summarizeButton[disabled]:hover::after {
+}
+
+#summarizeButton[disabled]:hover::after {
   content: "Please enter at least 200 characters to be able to summarize.";
   display: block;
   position: absolute;
@@ -90,9 +90,113 @@ h2 {
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
-  }
-  
-  /* Add smooth transitions */
-  textarea, #summarizeButton, #summaryText {
+}
+
+/* Add smooth transitions */
+textarea,
+#summarizeButton,
+#summaryText {
   transition: all 0.3s ease;
-  }
+}
+
+
+#sign-out {
+  display: inline-block;
+  /* Replace 'display:none;' with 'inline-block' to make the button visible */
+  position: fixed;
+  /* Position the button relative to the browser window */
+  top: 20px;
+  /* Add some space from the top of the window */
+  right: 20px;
+  /* Add some space from the right of the window */
+  padding: 8px 16px;
+  /* Add padding around the text */
+  font-size: 16px;
+  /* Increase the font size */
+  background-color: #3a7bd5;
+  /* Set the background color */
+  color: #ffffff;
+  /* Set the text color */
+  border: none;
+  /* Remove the border */
+  border-radius: 4px;
+  /* Add rounded corners */
+  cursor: pointer;
+  /* Change cursor to pointer when hovering */
+  text-decoration: none;
+  /* Remove text underline */
+  font-weight: bold;
+  /* Make the text bold */
+  transition: background-color 0.3s ease;
+  /* Add a transition effect for the background color */
+}
+
+.sign-out-button:hover {
+  background-color: #266399;
+  /* Change the background color when hovering */
+}
+
+/* ----------------------------- */
+
+
+#google-login-button {
+  background-color: #ffffff;
+  border: none;
+  color: #757575;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  padding: 15px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0 16px;
+
+  gap: 8px;
+}
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.google-login-button:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.login-btn {
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.google-login-button img {
+  width: 18px;
+  height: 18px;
+}

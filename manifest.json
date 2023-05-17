@@ -1,27 +1,29 @@
 {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
     "manifest_version": 3,
     "name": "Text Summarizer",
     "version": "1.0",
-    "key": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0NCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBb0lNSDRHdjBTekYxYU4zSmdad2QNCnROdyt5b0QrZnhocWJUVGpYWC8zYmhKUys1SkJWci9GYlo0bExjQWxIRkJyOWhMcnN1cjl6VHAvTWJQcG5lMzYNCm94K2szU1REWFhyWmw5ZXN2TG1uNzRVbEozdVliTVgzLzNQQnlBd0ZKVHF2NkNoTXB2YVpUWUhDMGFrNVVhbTANCmRPTWdmcWxsVmNrWmpqZVBWeERNT0ppL2NvZkxFK1dLelBiZjJKMnQxSFdlaGdYc0JGRzdMbHRvellHQTNPSXgNCnVDdDVIaWNjOTBiSTR0cllnekYrTU9tNnZHeWYrTmNIZFEyRTdiSDlIVkRLVm9pVWhFNzZHMHF0MXovanZuZWcNCllEeEhXa3N3UW5wQS94bm5WNGxIeGhadkRKd0NDMkxDR2pURVJueHV3L0hIVEdzdmxER0RNaUhKRkNxK0lrRkYNClBRSURBUUFCDQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0NCg==",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsPti94Tx1fTgm6Z0cFYiNjSbZuZYqxrlzXSWwREdFf1IK9w7VDrnlJAi2oYebA2bKKWVkPuhTRIOA8ARMXbwTy8XJQg0TgLQOoNw6R5FLDJq4NOMX4u5grZsKc34t++KVW8EYukq+TkuUL2p64xIiv5InLk6aLPI3lT7JVnWKyl4Hx9NlZotpRGu/JHjF59C61sVL7JLFzkWt/yFfGknKZROx5+kciEM7Le9vo+Jz6TNZAKCe/rB8W+7AbIvVa3CCeBUm9mMo2f29oB4O4Efsu4T3FRzR5zb0rzCRcwHfggNDA1xu38QgkLKf5cnvqJEbX7gEHWZ+KwfuQQmwHJ6OQIDAQAB",
     "description": "A Chrome extension to summarize text using OpenAI's API",
-    // "icons": {
-    //   "48": "icon48.png",
-    //   "128": "icon128.png"
-    // },
+
     "action": {
       "default_popup": "popup.html"
-    //   "default_icon": {
-    //     "48": "icon48.png"
-    //   }
+    },
+    "oauth2": {
+      "client_id": "655733145078-mp77s5ukmvoqlb8ffp0cl5d05aroqc90.apps.googleusercontent.com",
+      "scopes":[""]
     },
     "permissions": [
       "identity",
-      "identity.email",
-      "storage"
+      "storage",
+      "cookies"
     ],
-    "background": {
-      "service_worker": "background.js"
-    },
+    "host_permissions":[
+      "*://*.localhost:*/",
+      "*://*.budgethelper.click/"
+    ],
+  
     "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self';"
     }
