@@ -12,7 +12,7 @@
     },
     "oauth2": {
       "client_id": "655733145078-mp77s5ukmvoqlb8ffp0cl5d05aroqc90.apps.googleusercontent.com",
-      "scopes":[""]
+      "scopes":["https://www.googleapis.com/auth/userinfo.email"]
     },
     "permissions": [
       "identity",
