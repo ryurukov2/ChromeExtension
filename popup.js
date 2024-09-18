@@ -5,8 +5,9 @@ const signInButton = document.getElementById("sign-in");
 const signOutButton = document.getElementById("sign-out");
 const attemptsInfo = document.getElementById("remainingAttempts");
 const ovelayEl = document.getElementById("loginOverlay");
-// const BASE_URL = "http://localhost:81/";
-BASE_URL = "https://budgethelper.click/";
+// const BASE_URL = "http://localhost:8000/"; 
+// for local test
+BASE_URL = "https://summarize.ryurukov.dev/";
 updateRemainingAttempts();
 
 signInButton.addEventListener("click", function () {

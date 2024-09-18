@@ -21,7 +21,7 @@
     ],
     "host_permissions":[
       "*://*.localhost:*/",
-      "*://*.budgethelper.click/"
+      "*://*.summarize.ryurukov.dev/"
     ],
   
     "content_security_policy": {
