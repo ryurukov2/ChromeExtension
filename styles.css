@@ -1,11 +1,9 @@
-/* set background color for body and apply font */
 body {
   width: 690px;
   background-color: #f8f9fa;
   font-family: 'Poppins', sans-serif;
 }
 
-/* style for the header */
 h1 {
   text-align: center;
   margin-top: 30px;
@@ -14,7 +12,6 @@ h1 {
   color: #2c3e50;
 }
 
-/* style for the remaining attempts text */
 #remainingAttempts {
   text-align: center;
   margin-top: 10px;
@@ -23,7 +20,6 @@ h1 {
   color: #7f8c8d;
 }
 
-/* style for the input text box */
 textarea {
   width: 95%;
   height: 200px;
@@ -36,7 +32,6 @@ textarea {
   resize: none;
 }
 
-/* style for the summarize button */
 #summarizeButton {
   display: block;
   margin: 20px auto;
@@ -92,7 +87,6 @@ h2 {
   white-space: nowrap;
 }
 
-/* Add smooth transitions */
 textarea,
 #summarizeButton,
 #summaryText {
@@ -100,40 +94,42 @@ textarea,
 }
 
 
+#summary-history {
+  display: inline-block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #3a7bd5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
 #sign-out {
   display: inline-block;
-  /* Replace 'display:none;' with 'inline-block' to make the button visible */
   position: fixed;
-  /* Position the button relative to the browser window */
   top: 20px;
-  /* Add some space from the top of the window */
   right: 20px;
-  /* Add some space from the right of the window */
   padding: 8px 16px;
-  /* Add padding around the text */
   font-size: 16px;
-  /* Increase the font size */
   background-color: #3a7bd5;
-  /* Set the background color */
   color: #ffffff;
-  /* Set the text color */
   border: none;
-  /* Remove the border */
   border-radius: 4px;
-  /* Add rounded corners */
   cursor: pointer;
-  /* Change cursor to pointer when hovering */
   text-decoration: none;
-  /* Remove text underline */
   font-weight: bold;
-  /* Make the text bold */
   transition: background-color 0.3s ease;
-  /* Add a transition effect for the background color */
 }
 
 .sign-out-button:hover {
   background-color: #266399;
-  /* Change the background color when hovering */
 }
 
 /* ----------------------------- */

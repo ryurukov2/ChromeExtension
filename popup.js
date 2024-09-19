@@ -3,6 +3,7 @@ let selectedVersion = "GPT3";
 let maxAttempts = 20;
 const signInButton = document.getElementById("sign-in");
 const signOutButton = document.getElementById("sign-out");
+const historyButton = document.getElementById("summary-history");
 const attemptsInfo = document.getElementById("remainingAttempts");
 const ovelayEl = document.getElementById("loginOverlay");
 // const BASE_URL = "http://localhost:8000/"; 
@@ -32,6 +33,9 @@ signInButton.addEventListener("click", function () {
     console.error(err);
   }
 });
+historyButton.addEventListener("click", function() {
+  window.open(BASE_URL + "api/history", "_blank");
+})
 
 signOutButton.addEventListener("click", function () {
   try {
@@ -120,12 +124,14 @@ function hideLoginOverlay() {
   ovelayEl.style.display = "none";
   signInButton.style.display = "none";
   signOutButton.style.display = "inline";
+  historyButton.style.display = "inline";
   attemptsInfo.style.display = "block";
 }
 function showLoginOverlay() {
   ovelayEl.style.display = "flex";
   signInButton.style.display = "inline";
   signOutButton.style.display = "none";
+  historyButton.style.display = "none";
   attemptsInfo.style.display = "none";
 }
 
